@@ -1,0 +1,19 @@
+{
+  "name": "arch container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": []
+    }
+  },
+   "remoteUser": "user",
+   "overrideCommand": false,
+    "privileged": true,
+    "runArgs": [ "--cap-add=NET_ADMIN", "--cap-add=NET_RAW", "--device=/dev/net/tun", "--device=/dev/fuse" ]
+
+}
